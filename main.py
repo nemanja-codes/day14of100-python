@@ -26,6 +26,9 @@ def game():
   account_b = data[get_random_account()]
   game_should_continue = True
   while game_should_continue:
+    if account_a == account_b:
+       account_b = data[get_random_account()]
+      
     num_of_followers_a = account_a["follower_count"]
     num_of_followers_b = account_b["follower_count"]
     print("Compare A: ", end="")
